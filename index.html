@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Common header code -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <!-- SEO -->
+    <title>Captcha Example</title>
+    <meta name="description" content="This domain is established to be used as an example for using Google Recaptcha. You may use this domain in examples without prior coordination or asking for permission.">
+
+    <!-- Set favicon -->
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <!-- Run critical CSS -->
+    <style>
+        @font-face {
+            font-family: 'Roboto';
+            font-display: swap;
+            src: local('Roboto'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format('woff2');
+        }
+        
+        html,
+        div,
+        map,
+        dt,
+        isindex,
+        form,
+        header,
+        nav,
+        article,
+        footer,
+        address {
+            display: block;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .demo-ribbon {
+            width: 100%;
+            height: 40vh;
+            background-color: #3F51B5;
+            -webkit-flex-shrink: 0;
+            -ms-flex-negative: 0;
+            flex-shrink: 0;
+        }
+        
+        .demo-main {
+            margin-top: -35vh;
+            -webkit-flex-shrink: 0;
+            -ms-flex-negative: 0;
+            flex-shrink: 0;
+        }
+        
+        .demo-header .mdl-layout__header-row {
+            padding-left: 40px;
+        }
+        
+        .demo-container {
+            max-width: 1600px;
+            width: calc(100% - 16px);
+            margin: 0 auto;
+        }
+        
+        .demo-content {
+            border-radius: 2px;
+            padding: 80px 56px;
+            margin-bottom: 80px;
+        }
+        
+        .demo-layout.is-small-screen .demo-content {
+            padding: 40px 28px;
+        }
+        
+        .demo-content h3 {
+            margin-top: 48px;
+        }
+        
+        .demo-footer {
+            padding-left: 40px;
+        }
+        
+        .demo-footer .mdl-mini-footer--link-list a {
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo-layout mdl-layout mdl-js-layout mdl-color--grey-100">
+        <div class="demo-ribbon"></div>
+        <main class="demo-main mdl-layout__content">
+            <div class="demo-container mdl-grid">
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+                <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+                    <h3 style="text-align: center;">Captcha Example</h3>
+                    <p>This domain is established to be used as an example for using Google Recaptcha. You may use this domain in examples without prior coordination or asking for permission.</p>
+                    <h4>Regular Recaptcha</h4>
+                    <form action="#" method="POST">
+                        <div class="g-recaptcha" data-sitekey="6Lcw5mwUAAAAAPJ0rGy4MksFMWyF2gOXSVAhP3UY"></div>
+                        <br/>
+                        <input type="submit" value="Submit">
+                    </form>
+                    <h4>Invisible Recaptcha</h4>
+                    <form id='demo-form' action="#" method="POST">
+                        <button class="g-recaptcha mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" data-sitekey="6Lcw5mwUAAAAAPJ0rGy4MksFMWyF2gOXSVAhP3UY" data-callback='onSubmit'>Initialise Invisible Recaptcha</button>
+                        <br/>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Import Google Captcha-->
+    <script async defer src="https://www.google.com/recaptcha/api.js"></script>
+
+    <!-- Import MDL -->
+    <script async defer src="https://cdn.jsdelivr.net/npm/material-design-lite@1/dist/material.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-design-lite@1/dist/material.indigo-red.min.css">
+
+    <!-- Import font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</body>
+
+</html>
